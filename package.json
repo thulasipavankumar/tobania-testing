@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test":"cucumber-js --require cucumber.conf.js --require step-definitions/*.js features/search.feature",
-    "run-parallel":"cucumber-js --require cucumber.conf.js --require step-definitions/*.js features/search.feature --parallel 2"
-
+    "test": "cucumber-js --require cucumber.conf.js --require step-definitions/*.js features/search.feature --format progress-bar --format 'junit:reports/junit.xml' --format 'html:reports/cucumber-report.html' ",
+    "run-parallel": "cucumber-js --require cucumber.conf.js --require step-definitions/*.js features/search.feature --parallel 2"
   },
   "keywords": [],
   "author": "",

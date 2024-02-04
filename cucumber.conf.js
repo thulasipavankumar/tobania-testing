@@ -14,7 +14,6 @@ BeforeAll(async function () {
     headless: false,
     slowMo: 1000,
     channel:'chrome',
-
   });
 });
 

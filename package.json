@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js --require cucumber.conf.js --require step-definitions/*.js features/search.feature --format progress-bar --format 'junit:reports/junit/junit.xml' --format 'html:reports/html/index.html' --format 'json:reports/json/report.json'",
+    "test": "cucumber-js --require cucumber.conf.js --require step-definitions/*.js features/search.feature --format progress-bar --format 'junit:reports/junit/junit.xml' --format 'html:reports/html/index.html' --format 'json:reports/json/report.json' -f usage",
     "run-parallel": "cucumber-js --require cucumber.conf.js --require step-definitions/*.js features/search.feature --parallel 2"
   },
   "keywords": [],

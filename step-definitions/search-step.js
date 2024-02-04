@@ -4,7 +4,7 @@ const { test, expect } = require('@playwright/test')
 
 Given('User visit tobania website', async () => {
   const searchPage = new SearchPage(global.page)
-  await searchPage.navigateToHomePage(global.page);
+  await searchPage.navigateToHomePage();
 })
 
 When('User enters the keyword in the search bar and presses enter',async (dataTable) => {
@@ -21,10 +21,10 @@ When('User enters the keyword in the search bar and clicks the search icon',asyn
 
 Then('user should see relevant search results', async () => {
   const searchPage = new SearchPage(global.page)
-  await searchPage.assertSearchResults(global.page);
+  await searchPage.assertSearchResults();
 })
 
 Then('user clicks on the top result for more information', async () => {
   const searchPage = new SearchPage(global.page)
-  await searchPage.clickOnFirstResultLink(global.page);
+  await searchPage.clickOnFirstResultLink();
 })

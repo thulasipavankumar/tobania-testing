@@ -1,0 +1,22 @@
+{
+  "name": "tobania-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test":"cucumber-js --require cucumber.conf.js --require step-definitions/*.js features/search.feature",
+    "run-parallel":"cucumber-js --require cucumber.conf.js --require step-definitions/*.js features/search.feature --parallel 2"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.41.2",
+    "@types/node": "^20.11.16"
+  },
+  "dependencies": {
+    "cucumber": "^6.0.7",
+    "playwright-bdd": "^5.7.1"
+  }
+}

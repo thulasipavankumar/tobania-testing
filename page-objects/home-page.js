@@ -1,5 +1,5 @@
 const { expect } = require('@playwright/test')
-exports.SearchPage = class SearchPage {
+exports.HomePage = class HomePage {
   /**
    * @param {import ('@playwright/test').Page} page
    */
@@ -11,14 +11,10 @@ exports.SearchPage = class SearchPage {
     this.resultsPaneElements = page.locator('.hs-search-results__link')
   }
   async navigateToHomePage () {
-    try {
       await this.page.goto('https://www.tobania.be/en-gb/')
-
       await this.acceptCookies.click()
       await expect(page).toHaveTitle(/Tobania - Home/)
-    } catch (e) {
-      console.log(e)
-    }
+    
   }
 
   async searchKeyWordAndPressEnter (keyword) {
@@ -27,7 +23,8 @@ exports.SearchPage = class SearchPage {
       await this.searchBar.fill(keyword)
       await this.searchBar.press('Enter')
     } catch (e) {
-      console.log(e)
+      await page.screenshot({ path: 'screenshots/SearchFailKeyPress.png',fullPage: true  });
+      throw e;
     }
   }
   async searchKeyWordAndClick (keyword) {
@@ -36,7 +33,8 @@ exports.SearchPage = class SearchPage {
       await this.searchBar.fill(keyword)
       await this.searchButton.click()
     } catch (e) {
-      console.log(e)
+      await page.screenshot({ path: 'screenshots/SearchFailButtonClick.png' ,fullPage: true});
+      throw e;
     }
   }
   async assertSearchResults () {
@@ -45,11 +43,12 @@ exports.SearchPage = class SearchPage {
       await expect(this.page).toHaveTitle(/Search results/)
       await expect(await this.resultsPaneElements.count()).toBeGreaterThan(0)
     } catch (e) {
-      console.log(e)
-      throw e
+      await page.screenshot({ path: 'screenshots/SearchFailResultClick.png',fullPage: true });
+      throw e;
     }
   }
   async clickOnFirstResultLink () {
     await this.resultsPaneElements.first().click()
   }
+  
 }

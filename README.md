@@ -1,5 +1,14 @@
 This project demonstrates  automatation of searching for a keyword in [Tobania](https://www.tobania.be/) website
 
+
+## Regression suite details
+The latest regression run details of this project can be viewed [here](https://thulasipavankumar.github.io/tobania-testing/) 
+
+| Branch | Test status    |
+| :---:   | :---: | 
+| [Main](https://github.com/thulasipavankumar/tobania-testing/tree/main) | ![](https://github.com/thulasipavankumar/tobania-testing/actions/workflows/playwright.yml/badge.svg?branch=main)   | 
+| Most recent run | ![](https://github.com/thulasipavankumar/tobania-testing/actions/workflows/playwright.yml/badge.svg)   | 
+
 ## How to run the project
 1. Download the project to local machine
 2. Open the terminal/command prompt and use the command `npm install` to install dependencies 
@@ -18,7 +27,7 @@ This project demonstrates  automatation of searching for a keyword in [Tobania](
 
 
 
-# Why playwright
+# Why playwright framework
 
 - cli helper for templates & easy setup
 - microsoft backed project
@@ -31,3 +40,5 @@ This project demonstrates  automatation of searching for a keyword in [Tobania](
 - Api testing support
 - Currently the best open source testing tool in terms of performance
 
+# Contributions
+-  `To raise a issue you can click` [here](https://github.com/thulasipavankumar/tobania-testing/issues/new)

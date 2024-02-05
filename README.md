@@ -29,14 +29,15 @@ The latest regression run details of this project can be viewed [here](https://t
 
 # Why playwright framework
 
-- cli helper for templates & easy setup
-- microsoft backed project
-- multi browser support inbuilt 
+- Cli helper for templates & easy setup
+- Microsoft backed project
+- Multi browser support inbuilt
+- In-built support for test recording  
 - Open source with rapidly growing number of user base
-- in-built wait conditions
-- in-built parallalesim
-- in-bult runner 
-- multi-tab support
+- In-built wait conditions
+- In-built parallalesim
+- In-bult runner 
+- Multi-tab support
 - Api testing support
 - Currently the best open source testing tool in terms of performance
 

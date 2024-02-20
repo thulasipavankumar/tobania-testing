@@ -16,6 +16,9 @@ The latest regression run details of this project can be viewed [here](https://t
 4. After the test run, the results can be accessed in the folder `reports`
 5. To change the browser  open the file `cucumber.conf.js` and modify the channel
 
+## Sample screenshot of the [report](https://thulasipavankumar.github.io/tobania-testing/)  
+![Screenshot](Screenshot.png)
+
 ## Pre-requisite for running the project
 - minimum node version 18
 - minimum npm version 9.8

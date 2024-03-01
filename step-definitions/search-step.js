@@ -19,6 +19,12 @@ When('User enters a keyword in the search bar and presses enter',async (dataTabl
     await homePage.searchKeyWordAndClick(data['Query string']);
 })
 
+When('User enters a keyword in the search bar',async (dataTable) => {
+    const data = dataTable.rowsHash();
+    const homePage = new HomePage(global.page)
+    await homePage.searchKeyWordAndClick(data['Query string']);
+})
+
 Then('user should see relevant search results', async () => {
   const homePage = new HomePage(global.page)
   await homePage.assertSearchResults();
@@ -27,4 +33,14 @@ Then('user should see relevant search results', async () => {
 Then('user clicks on the top result for more information', async () => {
   const homePage = new HomePage(global.page)
   await homePage.clickOnFirstResultLink();
+})
+
+When('clicks the search icon', async () => {
+  const homePage = new HomePage(global.page)
+  await homePage.clickSearchIcon();
+})
+
+When('presses enter', async () => {
+  const homePage = new HomePage(global.page)
+  await homePage.pressEnterKey();
 })

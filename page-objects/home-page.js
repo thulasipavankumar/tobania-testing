@@ -16,6 +16,33 @@ exports.HomePage = class HomePage {
       await expect(page).toHaveTitle(/Tobania - Home/)
     
   }
+  async searchKeysInSearchBar (keyword) {
+    try {
+      await this.searchButton.click()
+      await this.searchBar.fill(keyword)
+    } catch (e) {
+      await page.screenshot({ path: 'screenshots/SearchFailKeyPress.png',fullPage: true  });
+      throw e;
+    }
+  }
+   async pressEnterKey () {
+    try {
+      await this.searchBar.press('Enter')
+    } catch (e) {
+      await page.screenshot({ path: 'screenshots/SearchFailKeyPress.png',fullPage: true  });
+      throw e;
+    }
+  }
+  async clickSearchIcon () {
+    try {
+      await this.searchButton.click()
+    } catch (e) {
+      await page.screenshot({ path: 'screenshots/SearchFailButtonClick.png' ,fullPage: true});
+      throw e;
+    }
+  }
+
+  /** Above Methods are refactored **/
 
   async searchKeyWordAndPressEnter (keyword) {
     try {

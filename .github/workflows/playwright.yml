@@ -1,8 +1,8 @@
 name: Playwright Tests
 on:
   # cronjob to run every 3 hours
-  schedule:
-    - cron: "0 */3 * * *"
+  #schedule:
+  #  - cron: "0 */3 * * *"
   
   push:
     branches: [  ]

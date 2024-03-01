@@ -25,7 +25,7 @@ exports.HomePage = class HomePage {
       throw e;
     }
   }
-   async pressEnterKey (keyword) {
+   async pressEnterKey () {
     try {
       await this.searchBar.press('Enter')
     } catch (e) {
@@ -33,7 +33,7 @@ exports.HomePage = class HomePage {
       throw e;
     }
   }
-  async clickSearchIcon (keyword) {
+  async clickSearchIcon () {
     try {
       await this.searchButton.click()
     } catch (e) {

@@ -44,26 +44,7 @@ exports.HomePage = class HomePage {
 
   /** Above Methods are refactored **/
 
-  async searchKeyWordAndPressEnter (keyword) {
-    try {
-      await this.searchButton.click()
-      await this.searchBar.fill(keyword)
-      await this.searchBar.press('Enter')
-    } catch (e) {
-      await page.screenshot({ path: 'screenshots/SearchFailKeyPress.png',fullPage: true  });
-      throw e;
-    }
-  }
-  async searchKeyWordAndClick (keyword) {
-    try {
-      await this.searchButton.click()
-      await this.searchBar.fill(keyword)
-      await this.searchButton.click()
-    } catch (e) {
-      await page.screenshot({ path: 'screenshots/SearchFailButtonClick.png' ,fullPage: true});
-      throw e;
-    }
-  }
+ 
   async assertSearchResults () {
     try {
       const title = await this.page.title()

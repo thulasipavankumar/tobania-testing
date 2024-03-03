@@ -7,22 +7,11 @@ Given('User visits tobania website', async () => {
   await homePage.navigateToHomePage();
 })
 
-When('User enters a keyword in the search bar and clicks the search icon',async (dataTable) => {
-    const data = dataTable.rowsHash();
-    const homePage = new HomePage(global.page)
-    await homePage.searchKeyWordAndPressEnter(data['Query string'])
-})
-
-When('User enters a keyword in the search bar and presses enter',async (dataTable) => {
-    const data = dataTable.rowsHash();
-    const homePage = new HomePage(global.page)
-    await homePage.searchKeyWordAndClick(data['Query string']);
-})
 
 When('User enters a keyword in the search bar',async (dataTable) => {
     const data = dataTable.rowsHash();
     const homePage = new HomePage(global.page)
-    await homePage.searchKeyWordAndClick(data['Query string']);
+    await homePage.searchKeysInSearchBar(data['Query string']);
 })
 
 Then('user should see relevant search results', async () => {
